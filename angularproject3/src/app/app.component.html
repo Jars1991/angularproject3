@@ -1,0 +1,52 @@
+<h1 id="tableLabel">Directors</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!directors"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="directors">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Nationality</th>
+      <th>Age</th>
+      <th>Active</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let director of directors">
+      <td>{{ director.name }}</td>
+      <td>{{ director.nationality }}</td>
+      <td>{{ director.age }}</td>
+      <td>{{ director.active }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h1 id="tableLabel">Movies</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!movies"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="movies">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>ReleaseYear</th>
+      <th>Gender</th>
+      <th>Duration</th>
+      <th>DirectorId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.name }}</td>
+      <td>{{ movie.releaseYear }}</td>
+      <td>{{ movie.gender }}</td>
+      <td>{{ movie.duration }}</td>
+      <td>{{ movie.directorId }}</td>
+    </tr>
+  </tbody>
+</table>
